@@ -1,0 +1,13 @@
+{% extends 'articles/base.html' %}
+{% block title %}Article List{% endblock title %}
+{% block body %}
+{% for a in article %}
+<br>
+<a href="{% url 'articles:each-article' a.slug %}" class="text-warning display-2 text-decoration-none">{{a.title}}</a>
+<div class="p-3 mb-2 w-75">{{a.get_Cont}}</div>
+
+
+{% endfor %}
+
+
+{% endblock body %}

@@ -1,0 +1,9 @@
+{% extends '../articles/base.html' %}
+{% block title %}Login{% endblock title %}
+{% block body %}
+<form method="post" action="/accounts/login/">
+{% csrf_token %}
+{{form}}
+<input type="submit" value="Login" class="bg-primary" >
+</form>
+{% endblock body %}

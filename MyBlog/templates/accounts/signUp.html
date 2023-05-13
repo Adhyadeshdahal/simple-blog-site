@@ -1,0 +1,10 @@
+{% extends '../articles/base.html' %}
+{% block title %}Sign-Up{% endblock title %}
+{% block body %}
+<h1>SignUp</h1>
+<form method="post" action="/accounts/signup/">
+{% csrf_token %}
+{{form}}<br>
+<input type="submit" value="Submit" class="bg-primary" >
+</form>
+{% endblock body %}

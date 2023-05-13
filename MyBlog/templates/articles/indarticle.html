@@ -1,0 +1,12 @@
+{% extends 'articles/base.html' %}
+{% block title %}{{article.title}}{% endblock title %}
+{% block body %}
+<div class="">
+<h1 class="text-warning display-2 text-center ">{{article.title}}</h1>
+<div class="float-left mx-auto"><img src="{{article.thumb.url}}" class="img-fluid p-5 mx-auto"></img></div>
+<div class="text-dark w-100 display-6">{{article.content}}</div>
+</div>
+
+
+
+{% endblock body %}
